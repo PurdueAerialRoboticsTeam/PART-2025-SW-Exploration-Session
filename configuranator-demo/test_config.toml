@@ -1,0 +1,63 @@
+test = true
+
+[sauron_config]
+model_path = "./crates/sauron/data/yolov8n.onnx"
+input_size = 640
+dataset_name = "COCO"
+fov = [93.0, 81.0]
+resolution = [4090, 2160]
+untagged_image_folder = "./crates/sauron/data/untagged"
+detection_image_folder = "./crates/sauron/data/detection"
+mapping_image_folder = "./crates/sauron/data/mapping"
+
+[aircraft_properties]
+turn_radius = 0.0
+velocity = 0.0
+
+[coordinates]
+flying_threshold = 0
+mapping_threshold = 0
+
+[[coordinates.waypoints]]
+x = 0.0
+y = 0.0
+
+[[coordinates.mapping_area]]
+x = 38.314816
+y = -76.548947
+
+[[coordinates.mapping_area]]
+x = 38.31546
+y = -76.552653
+
+[[coordinates.mapping_area]]
+x = 38.316639
+y = -76.55233
+
+[[coordinates.mapping_area]]
+x = 38.316016
+y = -76.5486
+
+[[coordinates.target_area]]
+x = 38.315386
+y = -76.550875
+
+[[coordinates.target_area]]
+x = 38.315683
+y = -76.552586
+
+[[coordinates.target_area]]
+x = 38.315895
+y = -76.552519
+
+[[coordinates.target_area]]
+x = 38.315607
+y = -76.5508
+
+[commconfig]
+dad_gnc_port = 5555
+gnc_dad_port = 5558
+dad_sauron_port = 5526
+sauron_dad_port = 5527
+groundstation_ip = "192.168.1.1"
+flightcomputer_ip = "192.168.1.1"
